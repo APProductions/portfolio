@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hydraulic Components | BM Hydromech</title>
+  <style>
+     * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        html {
+        scroll-behavior:smooth;
+    }
+
+    nav {
+      width: 100%;
+      background: linear-gradient(to right, #aa0601, #03229e);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+    }
+
+    .nav-links a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 26px;
+      color: white;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .tagline {
+    font-size: 24px;
+    color: #777; 
+    text-align: center;
+  } 
+    @media (max-width: 768px) {
+      .menu-btn { display: block; }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #0429bb;
+        position: absolute;
+        top: 60px;
+        right: 30px;
+        width: 200px;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .nav-links a {
+        padding: 12px 20px;
+        margin: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .nav-links.active {
+        display: flex;
+      }
+    }
+
+    .component-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .component-card {
+      flex: 0 0 calc(50% - 40px);
+      max-width: calc(50% - 40px);
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      text-align: center;
+      padding: 15px;
+      background: #fff;
+      transition: box-shadow 0.3s;
+    }
+
+    @media (max-width: 768px) {
+      .component-card {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+
+    .component-card:hover {
+        transform: translateY(-10px);
+      box-shadow: 0 4px 10px rgba(238, 7, 7, 0.663);
+    }
+
+    .component-card img {
+      max-width: 120px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #6a0a0a;
+    }
+
+    .brand-section img {
+      max-width: 100px;
+      margin: 10px 20px;
+      opacity: 0.9;
+      transition: opacity 0.3s;
+    }
+
+    .brand-section img:hover {
+      opacity: 1;
+    }
+
+    footer {
+      background: linear-gradient(to right, #aa0601, #03229e);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <div class="logo">BM Hydromech</div>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About Us</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</nav>
+
+<script>
+  function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('active');
+  }
+</script>
+<br>
+<header>
+  <h1>Hydraulic Components</h1>
+  <p class="tagline">Explore our wide range of premium hydraulic components from trusted global brands.</p>
+</header>
+<br>
+<section class="brand-section" style="text-align: center;">
+  <h2>Our Partner Brands</h2>
+  <img src="yukenlogo.jpg" alt="Yuken">
+</section>
+
+<section>
+  <h2>Product Categories</h2>
+  <div class="component-grid">
+    <div class="component-card">
+      <img src="dcvalve.jpg" alt="Directional Valve">
+      <h3>Directional Valves</h3>
+      <p>Efficient flow control with precision-engineered Yuken valves.</p>
+    </div>
+    <div class="component-card">
+      <img src="" alt="Pressure Valve">
+      <h3>Pressure Control Valves</h3>
+      <p>Reliable pressure regulation across demanding applications.</p>
+    </div>
+    <div class="component-card">
+      <img src="flowcontrol.jfif" alt="Flow Control Valve">
+      <h3>Flow Control Valves</h3>
+      <p>Ensure accurate flow management for optimal system performance.</p>
+    </div>
+    <div class="component-card">
+      <img src="hydraulicpump.jpg" alt="Hydraulic Pumps">
+      <h3>Hydraulic Pumps</h3>
+      <p>High-performance gear and vane pumps for industrial use.</p>
+    </div>
+    <div class="component-card">
+      <img src="manifoldblock.jpg" alt="maniflod block">
+      <h3>Manifold blocks</h3>
+      <p>Leak-free, durable connectors for safe and easy integration.</p>
+    </div>
+    <div class="component-card">
+        <img src="fittings.webp" alt="Couplings and Fittings">
+        <h3>Fittings & Couplings</h3>
+        <p>Leak-free, durable connectors for safe and easy integration.</p>
+      </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 BM Hydromech System. All rights reserved. | Contact: 
+    <a href="mailto:salesbmhydromech@outlook.com" style="color: #fff;">Email Us</a>
+  </p>
+</footer>
+
+</body>
+</html>
